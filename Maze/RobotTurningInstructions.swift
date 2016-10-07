@@ -23,7 +23,7 @@ extension ControlCenter {
 
     }
     
-    func continueStraightOrRotate(_ robot: ComplexRobotObject, wallInfo:(up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int)) {
+    func continueStraightOrRotate(_ robot: ComplexRobotObject)/*, wallInfo:(up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int))*/ {
         let randomNumber = arc4random() % 2
         print("continueStraightOrRotate: \(randomNumber)")
         // if statement that randomly calls either robot.move() or randomlyRotateRightOrLeft(robot: ComplexRobotObject)
