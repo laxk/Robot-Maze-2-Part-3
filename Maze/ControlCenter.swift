@@ -39,7 +39,7 @@ class ControlCenter {
         
         //If the robot encounters a three way junction and there is NO wall ahead, it should continue straight or rotate.
         if (isThreeWayJunction && !robotIsBlocked) {
-            continueStraightOrRotate(myRobot)
+            continueStraightOrRotate(myRobot, wallInfo: myWallInfo)
         }
         
         
@@ -52,7 +52,7 @@ class ControlCenter {
         
         //If the robot encounters a two way path and there IS a wall ahead, it should randomly rotate.
         if (isTwoWayPath && robotIsBlocked){
-            randomlyRotateRightOrLeft(myRobot)
+            turnTowardClearPath(myRobot, wallInfo: myWallInfo)
         }
         
         
